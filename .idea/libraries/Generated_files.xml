@@ -3,12 +3,14 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/src/main/resources/static/app2.js" />
-        <item url="file://$PROJECT_DIR$/src/main/resources/type1.js" />
+        <item url="file://$PROJECT_DIR$/src/main/resources/static/type1.js" />
+        <item url="file://$PROJECT_DIR$/src/main/resources/static/type2.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/src/main/resources/static/app2.js" />
       <root url="file://$PROJECT_DIR$/src/main/resources/static/type1.js" />
+      <root url="file://$PROJECT_DIR$/src/main/resources/static/type2.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
