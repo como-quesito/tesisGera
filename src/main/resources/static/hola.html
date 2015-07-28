@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appita">
+<head>
+    <meta charset="UTF-8">
+    <title>Administración</title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.5/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body ng-controller="control1">
+<div class="container">
+    <h1>Pagina de administración</h1>
+    {{mensaje}}
+    <p class="lead">Hola amigos malos</p>
+    <a class="btn btn-default" ng-click="conectarse()">Obtener los usuarios</a>
+    <table class="table table-bordered">
+        <tr class="success">
+            <th>Nombre</th>
+            <th>Sueldo</th>
+            <th>Edad</th>
+        </tr>
+        <tr  ng-repeat="usuario in usuarios">
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.sueldo}}</td>
+            <td>{{usuario.edad}}</td>
+        </tr>
+
+    </table>
+</div>
+
+<script src="webjars/jquery/3.0.0-alpha1/dist/jquery.js"></script>
+<script src="webjars/angular/1.4.3/angular.js"></script>
+<script src="webjars/angular-animate/1.4.3/angular-animate.js"></script>
+<script src="webjars/angular-route/1.4.3/angular-route.js"></script>
+<script src="webjars/angular-resource/1.4.3/angular-resource.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
