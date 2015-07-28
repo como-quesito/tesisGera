@@ -11,7 +11,7 @@ var angular2_1 = require('angular2/angular2');
 // Annotation section
 var MyAppComponent = (function () {
     function MyAppComponent() {
-        this.name = 'Campito nalgas de perro brabucon';
+        this.name = 'Campitos cara de perro';
     }
     MyAppComponent = __decorate([
         angular2_1.Component({

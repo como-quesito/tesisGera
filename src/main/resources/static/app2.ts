@@ -12,7 +12,7 @@ class MyAppComponent {
     name: string;
 
     constructor() {
-        this.name = 'Campito nalgas de perro brabucon';
+        this.name = 'Campitos cara de perro';
     }
 }
 bootstrap(MyAppComponent);
