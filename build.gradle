@@ -26,8 +26,8 @@ war {
     baseName = 'tesis'
     version = '0.0.1-SNAPSHOT'
 }
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
     mavenCentral()
@@ -42,13 +42,18 @@ configurations {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile('org.webjars.npm:bootstrap:3.3.5')
-    compile('org.webjars.npm:jquery:3.0.0-alpha1')
-    compile 'org.webjars.npm:angular:1.4.3'
-    compile 'org.webjars.npm:angular-animate:1.4.3'
-    compile 'org.webjars.npm:angular-resource:1.4.3'
-    compile 'org.webjars.npm:angular-route:1.4.3'
- //  providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile("javax.inject:javax.inject:1")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    compile("org.projectlombok:lombok:1.16.2")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-joda:2.6.0-rc1")
+  //  compile('org.webjars.npm:bootstrap:3.3.5')
+   // compile('org.webjars.npm:jquery:3.0.0-alpha1')
+  //  compile 'org.webjars.npm:angular:1.4.3'
+ //   compile 'org.webjars.npm:angular-animate:1.4.3'
+ //   compile 'org.webjars.npm:angular-resource:1.4.3'
+  //  compile 'org.webjars.npm:angular-route:1.4.3'
+  providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     testCompile("org.springframework.boot:spring-boot-starter-test") 
 }
 

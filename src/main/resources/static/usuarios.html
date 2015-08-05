@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="apUsuario">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-editable-table/bootstrap-editable-table.css">
+</head>
+<body ng-controller="ctrlUsuario">
+<div>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+        </div>
+    </script>
+<h1>Pagina de Usuarios</h1>
+<form class="form-inline">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Nombre" ng-model="nombre">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Edad" ng-model="edad">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Sueldo" ng-model="sueldo">
+    </div>
+    <button class="btn btn-default" ng-click="guardarUsuario('sm')">Guardar usuario</button>
+    <button class="btn btn-default" ng-click="actualizarUsuario()">Actualizar usuario</button>
+    <button class="btn btn-default" ng-click="borrarUsuario()">Borrar usuario</button>
+    <button class="btn btn-default" ng-click="buscarTodos()">Buscar Todos</button>
+    </form>
+    <table data-editable data-editable-spy class="table table-bordered">
+        <tr class="success">
+            <th>Sueldo</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Sueldo</th>
+        </tr>
+        <tr ng-repeat="usuario in usuarios">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.edad}}</td>
+            <td>{{usuario.sueldo}}</td>
+        </tr>
+    </table>
+    <button class="btn btn-default" ng-click="buscarPorId()">Buscar por id</button>
+    <table class="table table-bordered">
+        <tr class="success">
+            <th>Sueldo</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Sueldo</th>
+        </tr>
+        <tr>
+            <td>{{usu.id}}</td>
+            <td><input name="name" placeholder="Joe Doe">{{usu.nombre}}</td>
+            <td>{{usu.edad}}</td>
+            <td>{{usu.sueldo}}</td>
+        </tr>
+    </table>
+    <!-- The data-editable is used for styling, the data-editable-spy attribute initializes the behaviour on first interaction -->
+    <table data-editable data-editable-spy class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>E-Mail</th>
+            <th>Birthday</th>
+        </tr>
+        </thead>
+
+        <!-- The last <tr> in the <tbody> will be used as template for new rows -->
+        <tbody> <tr>
+            <td><input name="nombre" placeholder="Joe Doe"value="{{usu.nombre}}"></td>
+            <td><input name="email" placeholder="joe@example.com" type="email"></td>
+            <td><input name="birthday" placeholder="10/20/2000" type="date"></td>
+
+        </tr>
+
+        </tbody>
+
+
+    </table>
+    </div>
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/bootstrap-editable-table/bootstrap-editable-table.js"></script>
+
+<script src="js/usuario.js"></script>
+</body>
+</html>

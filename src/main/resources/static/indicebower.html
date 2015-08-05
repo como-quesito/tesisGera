@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="apita">
+<head>
+    <meta charset="UTF-8">
+    <title>Paginita</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="js/conbower.js"></script>
+</head>
+<body ng-controller="con1">
+<h1>Hola con bower</h1>
+{{mensaje}}
+<table class="table table-bordered table-responsive">
+    <tr class="success">
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Sueldo</th>
+    </tr>
+    <tr ng-repeat="usuario in usuarios">
+       <td>{{usuario.nombre}}</td>
+        <td>{{usuario.edad}}</td>
+        <td>{{usuario.sueldo}}</td>
+    </tr>
+
+</table>
+</body>
+</html>

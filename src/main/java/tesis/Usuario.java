@@ -1,29 +1,43 @@
 package tesis;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+
 /**
  * Created by campitos on 27/07/15.
  */
-public class Usuario {
-    int id;
 
-    public int getId() {
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Usuario {
+    @Id
+    String id;
+    String nombre;
+    int edad;
+    float sueldo;
+
+
+
+
+    public Usuario() {
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Usuario(int id, String nombre, int edad, float sueldo) {
+    public Usuario(String id, String nombre, int edad, float sueldo) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
         this.sueldo = sueldo;
     }
 
-    String nombre;
-    int edad;
-    float sueldo;
 
     public Usuario(String nombre, int edad, float sueldo) {
         this.nombre = nombre;
